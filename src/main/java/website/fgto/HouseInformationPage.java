@@ -9,12 +9,14 @@ import java.util.Calendar;
 public class HouseInformationPage extends WebPage {
   private static final long serialVersionUID = 1L;
 
-
   public HouseInformationPage(final PageParameters parameters) {
     super(parameters);
 
-    add(new Label("houseName", parameters.get("houseName")));
+    String houseName = parameters.get("houseName").toString();
+
+    add(new Label("houseName", houseName));
     add(new Label("currentYear", getCurrentYear()));
+    add(new IntroPanel("introPanel"));
   }
 
   private int getCurrentYear() {
