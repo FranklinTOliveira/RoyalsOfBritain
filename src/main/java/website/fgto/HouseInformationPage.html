@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <div id="intro">
-    <p>King Franklin III was born in the County of Sacramento.</p>
+    <h1>House <wicket:container wicket:id="houseName">Oliveira</wicket:container></h1>
+    <p> King Franklin III was born in the County of Sacramento.</p>
 </div>
 <div id="table">
     <table>
@@ -16,6 +17,6 @@
         <tr><td>King Franklin III</td></tr>
     </table>
 </div>
-<div id="footer"></div>
+<div id="footer">&copy <wicket:container wicket:id="currentYear">2019</wicket:container> Franklin Oliveira</div>
 </body>
 </html>
