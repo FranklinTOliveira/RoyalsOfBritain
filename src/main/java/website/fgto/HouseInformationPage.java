@@ -5,18 +5,14 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import website.fgto.houses.*;
 
-import java.util.Calendar;
-
 public class HouseInformationPage extends WebPage {
   private static final long serialVersionUID = 1L;
 
   public HouseInformationPage(final PageParameters parameters) {
     super(parameters);
-
     String houseName = parameters.get("houseName").toString();
-
     add(new Label("houseName", houseName));
-    add(new Label("currentYear", getCurrentYear()));
+    add(new Footer("footerPanel"));
 
     switch(houseName.toLowerCase()) {
       case "bruce":
@@ -49,9 +45,5 @@ public class HouseInformationPage extends WebPage {
       default:
         add(new Apology("introPanel"));
     }
-  }
-
-  private int getCurrentYear() {
-    return Calendar.getInstance().get(Calendar.YEAR);
   }
 }
