@@ -3,6 +3,7 @@ package website.fgto;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
+import website.fgto.royals_of_britain.WicketApplication;
 
 /**
  * Simple test using the WicketTester

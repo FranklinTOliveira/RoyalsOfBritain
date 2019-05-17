@@ -1,11 +1,11 @@
-package website.fgto.houses.intros;
+package website.fgto.royals_of_britain.pages.houses.intros;
 
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class Bruce extends Panel {
+public class Tudor extends Panel {
   private static final long serialVersionUID = 1L;
 
-  public Bruce(String id) {
+  public Tudor(String id) {
     super(id);
   }
 }

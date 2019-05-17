@@ -1,4 +1,4 @@
-package website.fgto;
+package website.fgto.royals_of_britain.pages;
 
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
