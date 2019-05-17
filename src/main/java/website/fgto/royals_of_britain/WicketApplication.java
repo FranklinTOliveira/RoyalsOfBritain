@@ -8,33 +8,31 @@ import website.fgto.royals_of_britain.pages.HomePage;
 /**
  * Application object for your web application.
  * If you want to run this application without deploying, run the Start class.
- * 
+ *
  * see website.fgto.Start#main(String[])
  */
-public class WicketApplication extends WebApplication
-{
-	/**
-	 * @see org.apache.wicket.Application#getHomePage()
-	 */
-	@Override
-	public Class<? extends WebPage> getHomePage()
-	{
-		return HomePage.class;
-	}
+public class WicketApplication extends WebApplication {
+  /**
+   * @see org.apache.wicket.Application#getHomePage()
+   */
+  @Override
+  public Class<? extends WebPage> getHomePage()
+  {
+    return HomePage.class;
+  }
 
-	public Class<? extends WebPage> getHouseInformationPage()
-	{
-		return HouseInformationPage.class;
-	}
+  public Class<? extends WebPage> getHouseInformationPage()
+  {
+    return HouseInformationPage.class;
+  }
 
-	/**
-	 * @see org.apache.wicket.Application#init()
-	 */
-	@Override
-	public void init()
-	{
-		super.init();
+  /**
+   * @see org.apache.wicket.Application#init()
+   */
+  @Override
+  public void init() {
+    super.init();
 
-		mountPage("/houses/#{houseName}", getHouseInformationPage());
-	}
+    mountPage("/houses/#{houseName}", getHouseInformationPage());
+  }
 }
