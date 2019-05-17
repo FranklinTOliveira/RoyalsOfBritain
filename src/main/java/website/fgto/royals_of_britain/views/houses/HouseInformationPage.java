@@ -1,11 +1,11 @@
-package website.fgto.royals_of_britain.pages.houses;
+package website.fgto.royals_of_britain.views.houses;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-import website.fgto.royals_of_britain.pages.Apology;
-import website.fgto.royals_of_britain.pages.Footer;
-import website.fgto.royals_of_britain.pages.houses.intros.*;
+import website.fgto.royals_of_britain.views.Apology;
+import website.fgto.royals_of_britain.views.Footer;
+import website.fgto.royals_of_britain.views.houses.intros.*;
 
 public class HouseInformationPage extends WebPage {
   private static final long serialVersionUID = 1L;

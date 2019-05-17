@@ -2,8 +2,8 @@ package website.fgto.royals_of_britain;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
-import website.fgto.royals_of_britain.pages.houses.HouseInformationPage;
-import website.fgto.royals_of_britain.pages.HomePage;
+import website.fgto.royals_of_britain.views.houses.HouseInformationPage;
+import website.fgto.royals_of_britain.views.HomePage;
 
 /**
  * Application object for your web application.

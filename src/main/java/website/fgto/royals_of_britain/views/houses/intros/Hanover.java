@@ -1,4 +1,4 @@
-package website.fgto.royals_of_britain.pages.houses.intros;
+package website.fgto.royals_of_britain.views.houses.intros;
 
 import org.apache.wicket.markup.html.panel.Panel;
 

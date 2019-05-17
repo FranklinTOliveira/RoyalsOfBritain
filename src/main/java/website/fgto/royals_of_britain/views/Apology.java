@@ -1,11 +1,11 @@
-package website.fgto.royals_of_britain.pages.houses.intros;
+package website.fgto.royals_of_britain.views;
 
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class Tudor extends Panel {
+public class Apology extends Panel {
   private static final long serialVersionUID = 1L;
 
-  public Tudor(String id) {
+  public Apology(String id) {
     super(id);
   }
 }
