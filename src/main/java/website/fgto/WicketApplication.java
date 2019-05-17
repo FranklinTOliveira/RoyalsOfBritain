@@ -2,6 +2,7 @@ package website.fgto;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+import website.fgto.houses.HouseInformationPage;
 
 /**
  * Application object for your web application.

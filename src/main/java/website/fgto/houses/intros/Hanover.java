@@ -1,11 +1,11 @@
-package website.fgto.houses;
+package website.fgto.houses.intros;
 
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class Windsor extends Panel {
+public class Hanover extends Panel {
   private static final long serialVersionUID = 1L;
 
-  public Windsor(String id) {
+  public Hanover(String id) {
     super(id);
   }
 }

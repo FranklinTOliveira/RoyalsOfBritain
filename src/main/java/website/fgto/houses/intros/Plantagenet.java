@@ -1,11 +1,11 @@
-package website.fgto.houses;
+package website.fgto.houses.intros;
 
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class Bruce extends Panel {
+public class Plantagenet extends Panel {
   private static final long serialVersionUID = 1L;
 
-  public Bruce(String id) {
+  public Plantagenet(String id) {
     super(id);
   }
 }

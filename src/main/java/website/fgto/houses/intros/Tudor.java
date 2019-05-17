@@ -1,11 +1,11 @@
-package website.fgto.houses;
+package website.fgto.houses.intros;
 
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class Normandy extends Panel {
+public class Tudor extends Panel {
   private static final long serialVersionUID = 1L;
 
-  public Normandy(String id) {
+  public Tudor(String id) {
     super(id);
   }
 }
