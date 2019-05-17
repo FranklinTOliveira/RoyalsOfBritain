@@ -21,11 +21,6 @@ public class WicketApplication extends WebApplication {
     return HomePage.class;
   }
 
-  public Class<? extends WebPage> getHouseInformationPage()
-  {
-    return HouseInformationPage.class;
-  }
-
   /**
    * @see org.apache.wicket.Application#init()
    */
@@ -33,6 +28,6 @@ public class WicketApplication extends WebApplication {
   public void init() {
     super.init();
 
-    mountPage("/houses/#{houseName}", getHouseInformationPage());
+    mountPage("/houses/#{houseName}", HouseInformationPage.class);
   }
 }
