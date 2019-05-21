@@ -1,4 +1,4 @@
-package website.fgto;
+package website.fgto.royals_of_britain;
 
 import java.lang.management.ManagementFactory;
 

@@ -1,4 +1,4 @@
-package website.fgto;
+package website.fgto.royals_of_britain;
 
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
