@@ -7,8 +7,8 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import website.fgto.royals_of_britain.views.houses.HouseInformationPage;
-import website.fgto.royals_of_britain.views.HomePage;
+import website.fgto.royals_of_britain.view.houses.HouseInformationPage;
+import website.fgto.royals_of_britain.view.HomePage;
 
 /**
  * Application object for your web application.

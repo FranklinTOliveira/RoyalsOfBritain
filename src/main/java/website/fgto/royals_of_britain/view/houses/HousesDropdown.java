@@ -1,4 +1,4 @@
-package website.fgto.royals_of_britain.views.houses;
+package website.fgto.royals_of_britain.view.houses;
 
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;

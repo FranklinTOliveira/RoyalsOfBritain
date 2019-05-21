@@ -1,4 +1,4 @@
-package website.fgto.royals_of_britain.views.houses;
+package website.fgto.royals_of_britain.view.houses;
 
 class HouseNames {
   static final String BRUCE = "bruce";
