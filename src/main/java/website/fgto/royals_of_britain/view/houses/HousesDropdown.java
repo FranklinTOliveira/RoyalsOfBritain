@@ -50,6 +50,10 @@ public class HousesDropdown extends Panel {
   }
 
   private String capitalizedHouseName(String houseName) {
-    return houseName.substring(0, 1).toUpperCase() + houseName.substring(1).toLowerCase();
+    if(houseName.isEmpty()) {
+      return houseName;
+    } else {
+      return houseName.substring(0, 1).toUpperCase() + houseName.substring(1).toLowerCase();
+    }
   }
 }
