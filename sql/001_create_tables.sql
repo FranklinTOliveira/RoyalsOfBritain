@@ -9,7 +9,7 @@ CREATE TABLE `kings` (
     `name` varchar(255) NOT NULL,
     `year_of_birth` int,
     `year_of_death` int,
-    `father_id` bigint(20),
+    `predecessor_id` bigint(20),
     `house_id` bigint(20),
     FOREIGN KEY (house_id) REFERENCES houses(id)
 );
