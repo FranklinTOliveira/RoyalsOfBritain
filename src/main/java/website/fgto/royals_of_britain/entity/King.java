@@ -16,6 +16,9 @@ public class King {
 
   private Integer yearOfDeath;
 
+  @OneToOne
+  private House house;
+
   public King() {}
 
   public King(String name) {
