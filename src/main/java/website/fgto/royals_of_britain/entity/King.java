@@ -12,6 +12,10 @@ public class King {
 
   private String name;
 
+  private Integer yearOfBirth;
+
+  private Integer yearOfDeath;
+
   public King() {}
 
   public King(String name) {
@@ -24,5 +28,13 @@ public class King {
 
   public String getName() {
     return name;
+  }
+
+  public Integer getYearOfBirth() {
+    return yearOfBirth;
+  }
+
+  public Integer getYearOfDeath() {
+    return yearOfDeath;
   }
 }
