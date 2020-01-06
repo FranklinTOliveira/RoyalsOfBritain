@@ -2,6 +2,7 @@ package website.fgto.royals_of_britain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import website.fgto.royals_of_britain.entity.House;
@@ -20,5 +21,8 @@ public class KingsService {
 
   public List<King> findAll() {
     return kingsRepository.findAll();
+  }
+  public List<King> findByHouse_Name(String houseName){
+    return kingsRepository.findByHouse_Name(houseName, Sort.by("yearOfBirth").ascending());
   }
 }
