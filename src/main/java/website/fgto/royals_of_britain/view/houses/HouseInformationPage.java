@@ -19,6 +19,7 @@ public class HouseInformationPage extends WebPage {
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
     addIntroPanel(houseName);
+    add(new KingsTableRows("kingsTableRows", houseName))
   }
 
   private void addIntroPanel(String houseName) {
