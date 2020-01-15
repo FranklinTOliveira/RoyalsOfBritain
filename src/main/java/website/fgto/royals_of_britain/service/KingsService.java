@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import website.fgto.royals_of_britain.entity.House;
 import website.fgto.royals_of_britain.entity.King;
-import website.fgto.royals_of_britain.repository.HousesRepository;
 import website.fgto.royals_of_britain.repository.KingsRepository;
 
 import java.util.List;
