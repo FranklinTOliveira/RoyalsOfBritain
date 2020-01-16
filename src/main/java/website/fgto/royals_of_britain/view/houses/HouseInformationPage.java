@@ -6,6 +6,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import website.fgto.royals_of_britain.view.Apology;
 import website.fgto.royals_of_britain.view.Footer;
 import website.fgto.royals_of_britain.view.houses.intros.*;
+import website.fgto.royals_of_britain.view.kings.KingsTableRows;
 
 public class HouseInformationPage extends WebPage {
   private static final long serialVersionUID = 1L;
@@ -19,6 +20,7 @@ public class HouseInformationPage extends WebPage {
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
     addIntroPanel(houseName);
+    add(new KingsTableRows("kingsTableRows", houseName));
   }
 
   private void addIntroPanel(String houseName) {
