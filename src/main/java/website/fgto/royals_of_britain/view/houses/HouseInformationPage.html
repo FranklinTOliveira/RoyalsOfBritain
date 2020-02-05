@@ -10,6 +10,15 @@
         body {
           padding-top: 5rem;
         }
+        a:link {
+	        color: var(--primary);
+        }
+        a:hover, a:active {
+	        color: var(--info);
+        }
+        a:visited {
+	        color: var(--secondary);
+        }
     </style>
 </head>
 <body>
@@ -58,7 +67,7 @@
         </table>
     </div>
 </main>
-<footer class="fixed-bottom container"  wicket:id="footerPanel">
+<footer class="clearfix container"  wicket:id="footerPanel">
     <p>&copy 2019 Franklin Oliveira</p>
 </footer>
 </body>
