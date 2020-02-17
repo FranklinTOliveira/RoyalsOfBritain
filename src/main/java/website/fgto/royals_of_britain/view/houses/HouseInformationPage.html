@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         /* Move down content because we have a fixed navbar that is 3.5rem tall */
-        body {
-          padding-top: 5rem;
+        nav {
+          margin-bottom: 2rem;
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Royals of Britain</a>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a House</a>
@@ -58,7 +58,7 @@
         </table>
     </div>
 </main>
-<footer class="fixed-bottom container"  wicket:id="footerPanel">
+<footer class="clearfix container"  wicket:id="footerPanel">
     <p>&copy 2019 Franklin Oliveira</p>
 </footer>
 </body>
