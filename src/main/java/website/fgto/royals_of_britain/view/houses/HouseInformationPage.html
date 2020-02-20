@@ -6,29 +6,44 @@
     <title wicket:id="houseName">Oliveira</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-        /* Move down content because we have a fixed navbar that is 3.5rem tall */
-        nav {
-          margin-bottom: 2rem;
-        }
+    .nav-link[data-toggle].collapsed:before {
+        content: " ▾";
+    }
+
+    .nav-link[data-toggle]:not(.collapsed):before {
+        content: " ▴";
+    }
+
+    main{
+         margin: 0 50px 75px 175px;
+         padding: 25px 0 0 0;
+    }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Royals of Britain</a>
-
-    <div class="navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a House</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01" wicket:id="housesDropdown">
-                    <a class="dropdown-item" href="/houses/bruce">Bruce</a>
-                    <a class="dropdown-item" href="/houses/windsor">Windsor</a>
-                </div>
-            </li>
-        </ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
+            <ul class="navbar navbar-expand-md navbar-dark bg-dark" id="sidebar">
+                <li class="nav-item">
+                    <a class="nav-link text-truncate" href="/"><i class="fa fa-home"></i><span class="d-none d-sm-inline">Royals of Britain</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-table"></i><span class="d-none d-sm-inline">Select a House</span></a>
+                    <div class="collapse" id="submenu1" aria-expanded="true">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item"><a class="nav-link collapsed py-1" href="/houses/bruce" data-toggle="collapse" data-target="/houses/bruce"><span>Bruce</span></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link collapsed py-1" href="/houses/windsor" data-toggle="collapse" data-target="/houses/windsor"><span>Windsor</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-</nav>
+</div>
 <main role="main">
     <div id="intro" class="container" wicket:id="introPanel">
         <!-- TODO: Fill out intro panels for each house with all the history -->
