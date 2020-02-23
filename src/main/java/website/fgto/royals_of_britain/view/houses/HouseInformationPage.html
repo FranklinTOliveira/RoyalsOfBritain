@@ -18,6 +18,20 @@
          margin: 0 50px 75px 175px;
          padding: 25px 0 0 0;
     }
+
+    .sidebar{
+        width: 75px;
+    }
+
+    .row1{
+        position: absolute;
+        width: 98%;
+        clear: both;
+    }
+    .row2{
+        position: absolute;
+        width: 98%;
+    }
     </style>
 </head>
 <body>
@@ -25,22 +39,18 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
-            <ul class="navbar navbar-expand-md navbar-dark bg-dark" id="sidebar">
-                <li class="nav-item">
-                    <a class="nav-link text-truncate" href="/"><i class="fa fa-home"></i><span class="d-none d-sm-inline">Royals of Britain</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-table"></i><span class="d-none d-sm-inline">Select a House</span></a>
-                    <div class="collapse" id="submenu1" aria-expanded="true">
-                        <ul class="flex-column pl-2 nav">
+            <div id="row1">
+                <p>Royals of Britain</p>
+            </div>
+            <div id="row2">
+            <p id="submenu1" data-toggle="collapse" aria-expanded="false">Select a House</p>
+                        <ul class="flex-column pl-2 nav" wicket:id="housesDropdown">
                             <li class="nav-item"><a class="nav-link collapsed py-1" href="/houses/bruce" data-toggle="collapse" data-target="/houses/bruce"><span>Bruce</span></a>
                             </li>
                             <li class="nav-item"><a class="nav-link collapsed py-1" href="/houses/windsor" data-toggle="collapse" data-target="/houses/windsor"><span>Windsor</span></a>
                             </li>
                         </ul>
-                    </div>
-                </li>
-            </ul>
+            </div>
         </div>
     </div>
 </div>
