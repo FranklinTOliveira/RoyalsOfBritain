@@ -13,25 +13,6 @@
     .nav-link[data-toggle]:not(.collapsed):before {
         content: " ▴";
     }
-
-    <!--main{-->
-         <!--margin: 0 50px 75px 175px;-->
-         <!--padding: 25px 0 0 0;-->
-    <!--}-->
-
-    <!--.sidebar{-->
-        <!--width: 75px;-->
-    <!--}-->
-
-    <!--.row1{-->
-        <!--position: absolute;-->
-        <!--width: 98%;-->
-        <!--clear: both;-->
-    <!--}-->
-    <!--.row2{-->
-        <!--position: absolute;-->
-        <!--width: 98%;-->
-    <!--}-->
     </style>
 </head>
 <body>
@@ -41,58 +22,50 @@
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="#">Royals of Britain</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pedro</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sofea</a></li>
+                    <li class="nav-item">Royals of Britain</li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Select a House</a>
+                        <div class="collapse" id="submenu1" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav" wicket:id="housesDropdown">
+                            <li class="nav-item"><a class="nav-link py-0" href="#">Oliveira</a></li>
+                        </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <!--<div id="row1">-->
-                <!--<p>Royals of Britain</p>-->
-            <!--</div>-->
-            <!--<div id="row2">-->
-            <!--<p id="submenu1" data-toggle="collapse" aria-expanded="false">Select a House</p>-->
-                        <!--<ul class="flex-column pl-2 nav" wicket:id="housesDropdown">-->
-                            <!--<li class="nav-item"><a class="nav-link collapsed py-1" href="/houses/bruce" data-toggle="collapse" data-target="/houses/bruce"><span>Bruce</span></a>-->
-                            <!--</li>-->
-                            <!--<li class="nav-item"><a class="nav-link collapsed py-1" href="/houses/windsor" data-toggle="collapse" data-target="/houses/windsor"><span>Windsor</span></a>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-            <!--</div>-->
         </nav>
 
-<main class="col-md-9 ml-sm-auto col-lg-10 px-4 row" role="main">
-    <div id="intro" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom" wicket:id="introPanel">
-        <!-- TODO: Fill out intro panels for each house with all the history -->
-        <h1>House Oliveira</h1>
-        <p> King Franklin III was born in the County of Sacramento.</p>
-    </div>
-    <!-- TODO: Create a panel for the kings table -->
-    <!-- TODO: Fill in rows in kings table panel with content from the database -->
-    <div id="table" class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Year of Birth</th>
-                    <th scope="col">Year of Death</th>
-                </tr>
-            </thead>
-            <tbody>
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-4 row" role="main">
+            <div id="intro" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom" wicket:id="introPanel">
+                <!-- TODO: Fill out intro panels for each house with all the history -->
+                <h1>House Oliveira</h1>
+                <p> King Franklin III was born in the County of Sacramento.</p>
+            </div>
+            <div id="table" class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Year of Birth</th>
+                            <th scope="col">Year of Death</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-            <tr wicket:id="kingsTableRows">
-                <td>Franklin III</td>
-                <td>1984</td>
-                <td>?</td>
-            </tr>
+                    <tr wicket:id="kingsTableRows">
+                        <td>Franklin III</td>
+                        <td>1984</td>
+                        <td>?</td>
+                    </tr>
 
-            </tbody>
-        </table>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer class="col-md-9 ml-sm-auto col-lg-10 px-4 row"  wicket:id="footerPanel">
+            <p>&copy 2019 Franklin Oliveira</p>
+        </footer>
     </div>
-</main>
-    <footer class="col-md-9 ml-sm-auto col-lg-10 px-4 row"  wicket:id="footerPanel">
-        <p>&copy 2019 Franklin Oliveira</p>
-    </footer>
-</div>
 </div>
 </body>
 </html>
