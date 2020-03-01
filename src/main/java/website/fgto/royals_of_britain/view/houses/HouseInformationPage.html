@@ -6,6 +6,11 @@
     <title wicket:id="houseName">Oliveira</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
     .nav-link[data-toggle].collapsed:before {
         content: " ▾";
     }
@@ -13,65 +18,68 @@
     .nav-link[data-toggle]:not(.collapsed):before {
         content: " ▴";
     }
-    .wrap {
+
+    #wrap {
         display: flex;
-        min-height: 100vh;
-        flex-direction: column;
+        flex-flow: column;
+        height: auto;
     }
 
-   .flexthing{
-        flex: 1;
-   }
+
+
 
    </style>
 </head>
-<body id="wrap">
+<body>
 
-        <div class="col-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" style="float: left;" id="sidebar">
-                <ul class="nav flex-column">
-                    <li class="nav-item">Royals of Britain</li>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Select a House</a>
-                        <div class="collapse" id="submenu1" aria-expanded="false">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 vh-100" id="sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">Royals of Britain</li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Select a House</a>
+                    <div class="collapse" id="submenu1" aria-expanded="false">
                         <ul class="flex-column pl-2 nav" wicket:id="housesDropdown">
                             <li class="nav-item"><a class="nav-link py-0" href="#">Oliveira</a></li>
                         </ul>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
 
-        <main class="col-md-9 mx-sm-auto col-lg-10 py-4 px-4 row" id="flexthing" style="width: 75%;" role="main">
-            <div id="intro" class="row"  wicket:id="introPanel">
-                <!-- TODO: Fill out intro panels for each house with all the history -->
-                <p> King Franklin III was born in the County of Sacramento.</p>
-            </div>
-            <div id="table" class="row">
-                <table class="table">
-                    <thead>
+        <div class="col-sm-9 position-relative d-flex align-items-end flex-column" id="wrap">
+            <main role="main">
+                <div id="intro" class="row"  wicket:id="introPanel">
+                    <!-- TODO: Fill out intro panels for each house with all the history -->
+                    <p> King Franklin III was born in the County of Sacramento.</p>
+                </div>
+                <div id="table" class="row">
+                    <table class="table">
+                        <thead>
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Year of Birth</th>
                             <th scope="col">Year of Death</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
 
-                    <tr wicket:id="kingsTableRows">
-                        <td>Franklin III</td>
-                        <td>1984</td>
-                        <td>?</td>
-                    </tr>
+                        <tr wicket:id="kingsTableRows">
+                            <td>Franklin III</td>
+                            <td>1984</td>
+                            <td>?</td>
+                        </tr>
 
-                    </tbody>
-                </table>
-            </div>
-        </main>
-        <footer class="col-md-9 ml-sm-auto col-lg-10 px-4 row" wicket:id="footerPanel">
-            <p>&copy 2019 Franklin Oliveira</p>
-        </footer>
+                        </tbody>
+                    </table>
 
+                </div>
 
-
+            </main>
+            <footer class="footer-copyright mt-auto p-2 container text-center" id="footer" wicket:id="footerPanel"><p>&copy 2019 Franklin Oliveira</p></footer>
+        </div>
+    </div>
+</div>
 </body>
 </html>
