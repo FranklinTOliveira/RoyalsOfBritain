@@ -1,8 +1,12 @@
 package website.fgto.royals_of_britain.view.houses;
 
+import org.apache.wicket.markup.head.CssHeaderItem;
+import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.apache.wicket.request.resource.CssResourceReference;
+import website.fgto.royals_of_britain.WicketApplication;
 import website.fgto.royals_of_britain.view.Apology;
 import website.fgto.royals_of_britain.view.Footer;
 import website.fgto.royals_of_britain.view.houses.intros.*;
@@ -21,6 +25,15 @@ public class HouseInformationPage extends WebPage {
     add(new Footer("footerPanel"));
     addIntroPanel(houseName);
     add(new KingsTableRows("kingsTableRows", houseName));
+  }
+
+  @Override
+  public void renderHead(IHeaderResponse response) {
+    CssResourceReference cssFile =
+        new CssResourceReference(WicketApplication.class,"style.css");
+    CssHeaderItem cssItem = CssHeaderItem.forReference(cssFile);
+
+    response.render(cssItem);
   }
 
   private void addIntroPanel(String houseName) {
