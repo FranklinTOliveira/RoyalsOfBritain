@@ -66,3 +66,10 @@ h3 {
 	font-size:24pt;
 	color:#092E67;
 }
+.nav-link[data-toggle].collapsed:before {
+        content: " ▾";
+}
+
+.nav-link[data-toggle]:not(.collapsed):before {
+        content: " ▴";
+}
