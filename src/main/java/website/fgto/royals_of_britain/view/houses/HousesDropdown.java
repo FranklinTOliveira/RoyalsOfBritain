@@ -1,8 +1,9 @@
 package website.fgto.royals_of_britain.view.houses;
 
+import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.settings.MarkupSettings;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -10,15 +11,16 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import website.fgto.royals_of_britain.service.HousesService;
 
-public class HousesDropdown extends Panel {
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+
+public class HousesDropdown extends WebPage {
   private static final long serialVersionUID = 1L;
 
   @SpringBean
   HousesService housesService;
 
-  public HousesDropdown(String id) {
-    super(id);
-
+  public HousesDropdown (){
     add(buildDropdownLinks());
   }
 
