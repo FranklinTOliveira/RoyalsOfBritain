@@ -21,7 +21,7 @@ public class HouseInformationPage extends WebPage {
     String houseName = parameters.get("houseName").toString();
 
     add(new Label("houseName", houseName));
-    add(new HousesDropdown("housesDropdown"));
+    add(new HousesDropdown());
     add(new Footer("footerPanel"));
     addIntroPanel(houseName);
     add(new KingsTableRows("kingsTableRows", houseName));

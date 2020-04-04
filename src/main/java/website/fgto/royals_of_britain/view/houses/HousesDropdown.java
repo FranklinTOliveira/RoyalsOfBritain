@@ -17,22 +17,8 @@ public class HousesDropdown extends Panel {
   @SpringBean
   HousesService housesService;
 
-  public HousesDropdown(String id) {
-    super(id);
-
-    add(buildDropdownLinks());
-  }
-
-  private RepeatingView buildDropdownLinks() {
-    RepeatingView links = new RepeatingView("dropdownLinks");
-
-    housesService
-      .findAll()
-      .forEach(
-        (house) -> links.add(buildDropdownItem(links, house.getName()))
-      );
-
-    return links;
+  public HousesDropdown() {
+    add(new WebMarkupContainer(Hyperlink.class));
   }
 
   private Link buildDropdownItem(RepeatingView parent, String houseName) {
