@@ -35,13 +35,16 @@ public class HousesDropdown extends Panel {
     return links;
   }
 
-  private Link buildDropdownItem(RepeatingView parent, String houseName) {
+  private WebMarkupContainer buildDropdownItem(RepeatingView parent, String houseName) {
+    WebMarkupContainer listItem = new WebMarkupContainer(parent.newChildId());
     BookmarkablePageLink link =
-        new BookmarkablePageLink<Void>(parent.newChildId(), HouseInformationPage.class, buildPageParameters(houseName));
+        new BookmarkablePageLink<Void>("dropdownLink", HouseInformationPage.class, buildPageParameters(houseName));
 
     link.setBody(new Model<>(capitalizedHouseName(houseName)));
 
-    return link;
+    listItem.add(link);
+
+    return listItem;
   }
 
   private PageParameters buildPageParameters(String houseName) {
