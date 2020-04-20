@@ -65,6 +65,9 @@ public class HouseInformationPage extends WebPage {
       case HouseNames.WINDSOR:
         add(new Windsor("introPanel"));
         break;
+      case "":
+        add(new Frontispiece("introPanel"));
+        break;
       default:
         add(new Apology("introPanel"));
     }
