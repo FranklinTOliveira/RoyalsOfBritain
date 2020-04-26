@@ -27,18 +27,10 @@ public class HomePage extends WebPage {
   @Override
   public void renderHead(IHeaderResponse response) {
     CssResourceReference cssFile =
-        new CssResourceReference(WicketApplication.class,"style.css");
+        new CssResourceReference(WicketApplication.class, "style.css");
     CssHeaderItem cssItem = CssHeaderItem.forReference(cssFile);
 
     response.render(cssItem);
   }
-
-  public void addIntroPanel(String houseName) {
-    if ("".equals(houseName.toLowerCase())) {
-      add(new Frontispiece("introPanel"));
-
-    } else {
-      add(new Apology("introPanel"));
-    }
-  }
 }
+
