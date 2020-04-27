@@ -7,16 +7,18 @@
 <body>
 <table>
 <wicket:panel>
-    <thead><tr wicket:id="headings">
+    <wicket:id="tableTemplate">
+    <thead><tr>
     <th wicket:id="nameHeading">Name</th>
     <th wicket:id="birthHeading">Year of Birth</th>
     <th wicket:id="deathHeading">Year of Death</th>
     </tr></thead>
-    <tr wicket:id="kingRow">
+    <tr>
         <td wicket:id="kingsName">Franklin III</td>
         <td wicket:id="birthYear">1984</td>
         <td wicket:id="deathYear">?</td>
     </tr>
+    </wicket:id>
 </wicket:panel>
 </table>
 </body>
