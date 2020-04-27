@@ -19,6 +19,27 @@ public class KingsTableRows extends Panel {
   }
 
   private RepeatingView buildRows(String houseName) {
+    RepeatingView rows = new RepeatingView("heading");
+    if (houseName=!"") {
+      .findByHouse_Name(houseName)
+          .forEach(
+              (king) -> {
+                WebMarkupContainer heading = new WebMarkupContainer(rows.newChildId());
+
+                heading.add(new Label("nameHeading"));
+                heading.add(new Label("birthHeading"));
+                heading.add(new Label("deathHeading"));
+
+
+                rows.add(heading);
+              }
+          )}
+    else {
+      //add whitespace
+    }
+  }
+
+  private RepeatingView buildRows(String houseName) {
     RepeatingView rows = new RepeatingView("kingRow");
     kingsService
       .findByHouse_Name(houseName)
