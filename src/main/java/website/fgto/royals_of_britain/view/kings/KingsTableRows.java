@@ -20,31 +20,24 @@ public class KingsTableRows extends Panel {
   }
 
   private RepeatingView buildRows(String houseName) {
-    RepeatingView rows = new RepeatingView("tableTemplate");
+    RepeatingView rows = new RepeatingView;
 
     if (rows.equals(houseName)) {
       kingsService
           .findByHouse_Name(houseName)
           .forEach(
               (king) -> {
-                WebMarkupContainer row = new WebMarkupContainer(rows.newChildId());
+                WebMarkupContainer row = new WebMarkupContainer (rows.newChildId());
 
-                row.add(new Label("nameHeading"));
-                row.add(new Label("birthHeading"));
-                row.add(new Label("deathHeading"));
                 row.add(new Label("kingsName", new Model<>(king.getName())));
                 row.add(new Label("birthYear", new Model<>(king.getYearOfBirth())));
                 row.add(new Label("deathYear", new Model<>(king.getYearOfDeath())));
 
                 rows.add(row);
 
-                }
-              );
-      return rows;
-    } else {
-      RepeatingView whiteSpace = new RepeatingView(String.format("%20d"));
-
-      return whiteSpace;
+              }
+          );
     }
+  return rows;
   }
 }
