@@ -8,21 +8,19 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import website.fgto.royals_of_britain.service.KingsService;
 
-public class KingsTableRows extends Panel {
+public class KingsTable extends Panel {
 
   @SpringBean
   KingsService kingsService;
 
-  public KingsTableRows(String id, String houseName) {
+  public KingsTable(String id, String houseName) {
     super(id);
 
     add(buildRows(houseName));
   }
 
   private RepeatingView buildRows(String houseName) {
-    RepeatingView rows = new RepeatingView;
-
-    if (rows.equals(houseName)) {
+    RepeatingView rows = new RepeatingView("kingRow");
       kingsService
           .findByHouse_Name(houseName)
           .forEach(
@@ -37,7 +35,6 @@ public class KingsTableRows extends Panel {
 
               }
           );
-    }
   return rows;
   }
 }
