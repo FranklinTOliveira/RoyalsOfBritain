@@ -21,20 +21,19 @@ public class KingsTable extends Panel {
 
   private RepeatingView buildRows(String houseName) {
     RepeatingView rows = new RepeatingView("kingRow");
-      kingsService
-          .findByHouse_Name(houseName)
-          .forEach(
-              (king) -> {
-                WebMarkupContainer row = new WebMarkupContainer (rows.newChildId());
+    kingsService
+      .findByHouse_Name(houseName)
+      .forEach(
+        (king) -> {
+            WebMarkupContainer row = new WebMarkupContainer (rows.newChildId());
 
-                row.add(new Label("kingsName", new Model<>(king.getName())));
-                row.add(new Label("birthYear", new Model<>(king.getYearOfBirth())));
-                row.add(new Label("deathYear", new Model<>(king.getYearOfDeath())));
+            row.add(new Label("kingsName", new Model<>(king.getName())));
+            row.add(new Label("birthYear", new Model<>(king.getYearOfBirth())));
+            row.add(new Label("deathYear", new Model<>(king.getYearOfDeath())));
 
-                rows.add(row);
-
-              }
-          );
-  return rows;
+            rows.add(row);
+            }
+        );
+      return rows;
+    }
   }
-}
