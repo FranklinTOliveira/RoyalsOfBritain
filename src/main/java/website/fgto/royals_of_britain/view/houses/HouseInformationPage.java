@@ -41,7 +41,7 @@ public class HouseInformationPage extends WebPage {
     response.render(cssItem);
   }
 
-  public void addIntroPanel(String houseName) {
+  private void addIntroPanel(String houseName) {
     switch(houseName.toLowerCase()) {
       case HouseNames.BRUCE:
         add(new Bruce("introPanel"));
