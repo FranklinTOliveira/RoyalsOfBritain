@@ -8,13 +8,14 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import website.fgto.royals_of_britain.service.KingsService;
 
-public class KingsTableRows extends Panel {
+public class KingsTable extends Panel {
 
   @SpringBean
   KingsService kingsService;
 
-  public KingsTableRows(String id, String houseName) {
+  public KingsTable(String id, String houseName) {
     super(id);
+
     add(buildRows(houseName));
   }
 
@@ -23,16 +24,16 @@ public class KingsTableRows extends Panel {
     kingsService
       .findByHouse_Name(houseName)
       .forEach(
-          (king) -> {
-            WebMarkupContainer row = new WebMarkupContainer(rows.newChildId());
+        (king) -> {
+            WebMarkupContainer row = new WebMarkupContainer (rows.newChildId());
 
             row.add(new Label("kingsName", new Model<>(king.getName())));
             row.add(new Label("birthYear", new Model<>(king.getYearOfBirth())));
             row.add(new Label("deathYear", new Model<>(king.getYearOfDeath())));
 
             rows.add(row);
-          }
-      );
-    return rows;
+            }
+        );
+      return rows;
+    }
   }
-}
