@@ -10,7 +10,7 @@ import website.fgto.royals_of_britain.WicketApplication;
 import website.fgto.royals_of_britain.view.Apology;
 import website.fgto.royals_of_britain.view.Footer;
 import website.fgto.royals_of_britain.view.houses.intros.*;
-import website.fgto.royals_of_britain.view.kings.KingsTableRows;
+import website.fgto.royals_of_britain.view.kings.KingsTable;
 
 public class HouseInformationPage extends WebPage {
   private static final long serialVersionUID = 1L;
@@ -24,7 +24,12 @@ public class HouseInformationPage extends WebPage {
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
     addIntroPanel(houseName);
-    add(new KingsTableRows("kingsTableRows", houseName));
+
+    if (!houseName.isEmpty()){
+      add(new KingsTable("kingsTable", houseName));
+    } else {
+      add(new Label("kingsTable",""));
+    }
   }
 
   @Override
