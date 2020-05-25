@@ -31,6 +31,14 @@ public class HouseInformationPage extends WebPage {
       add(new Label("kingsTable",""));
     }
   }
+  
+  public void updatemylabel(String ""String introduction){
+    updatemylabel("Introduction");
+  }
+
+  private void updatemylabel(String introduction) {
+  }
+
 
   @Override
   public void renderHead(IHeaderResponse response) {
