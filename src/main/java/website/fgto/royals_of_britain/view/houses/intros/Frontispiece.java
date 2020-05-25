@@ -8,6 +8,6 @@ public class Frontispiece extends Panel {
 
   public Frontispiece(String id) {
     super(id);
-    add(new Label("Introduction"));
+    add(new Label("introduction"));
   }
 }
