@@ -15,8 +15,8 @@ public class HomePage extends WebPage {
 
   public HomePage() {
     super();
-    //This should set a value to my Label but something is missing?
-    add(new Label("homePage", homePage));
+
+    add(new Label("homePage", "Royals of Britain - Home Page"));
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
   }
