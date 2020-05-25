@@ -13,8 +13,8 @@ import website.fgto.royals_of_britain.view.houses.HousesDropdown;
 public class HomePage extends WebPage {
   private static final long serialVersionUID = 1L;
 
-  public HomePage(IModel<?> model) {
-    super(model);
+  public HomePage() {
+    super();
     add(new Label("homePage"));
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
