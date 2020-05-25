@@ -28,6 +28,7 @@ public class HouseInformationPage extends WebPage {
     if (!houseName.isEmpty()){
       add(new KingsTable("kingsTable", houseName));
     } else {
+      add(new Label("kingsTable",""));
       add(new Label("houseName","Introduction"));
     }
   }
