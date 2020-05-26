@@ -2,7 +2,6 @@ package website.fgto.royals_of_britain.view.houses;
 
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.model.Model;
@@ -23,8 +22,6 @@ public class HousesDropdown extends Panel {
     add(buildDropdownLinks());
   }
 
-//  <!-- modify method then form WebMarkupContainer
-// then make method return WebMarkupContainer, as opposed to create new files with separate classes -->
   private RepeatingView buildDropdownLinks() {
     RepeatingView links = new RepeatingView("dropdownListItem");
 
