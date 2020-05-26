@@ -3,6 +3,7 @@ package website.fgto.royals_of_britain.view;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.resource.CssResourceReference;
 import website.fgto.royals_of_britain.WicketApplication;
 import website.fgto.royals_of_britain.view.houses.HousesDropdown;
@@ -13,9 +14,9 @@ public class HomePage extends WebPage {
   public HomePage() {
     super();
 
+    add(new Label("homePage", "Royals of Britain - Home Page"));
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
-
   }
 
   @Override

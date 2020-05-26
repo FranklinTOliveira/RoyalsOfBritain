@@ -20,14 +20,15 @@ public class HouseInformationPage extends WebPage {
 
     String houseName = parameters.get("houseName").toString();
 
-    add(new Label("houseName", houseName));
     add(new HousesDropdown("housesDropdown"));
     add(new Footer("footerPanel"));
     addIntroPanel(houseName);
 
     if (!houseName.isEmpty()){
+      add(new Label("pageTitle", capitalizedHouseName(houseName)));
       add(new KingsTable("kingsTable", houseName));
     } else {
+      add(new Label("pageTitle","Introduction"));
       add(new Label("kingsTable",""));
     }
   }
@@ -75,6 +76,14 @@ public class HouseInformationPage extends WebPage {
         break;
       default:
         add(new Apology("introPanel"));
+    }
+  }
+
+  private String capitalizedHouseName(String houseName) {
+    if(houseName.isEmpty()) {
+      return houseName;
+    } else {
+      return houseName.substring(0, 1).toUpperCase() + houseName.substring(1).toLowerCase();
     }
   }
 }
