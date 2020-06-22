@@ -15,4 +15,4 @@ CREATE TABLE `kings` (
 );
 
 ALTER TABLE `kings`
-ADD FOREIGN KEY (father_id) REFERENCES kings(id);
+ADD FOREIGN KEY (predecessor_id) REFERENCES kings(id);
