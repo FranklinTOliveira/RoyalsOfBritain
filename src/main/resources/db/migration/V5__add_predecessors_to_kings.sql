@@ -1,1072 +1,953 @@
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Gabran'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aedan';
+  WHERE name = 'Gabran'
+)
+WHERE k.name = 'Aedan';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aedan'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eochaid I (Dalriata)';
+  WHERE name = 'Aedan'
+)
+WHERE k.name = 'Eochaid I (Dalriata)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eochaid I (Dalriata)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Domnall Brecc';
+  WHERE name = 'Eochaid I (Dalriata)'
+)
+WHERE k.name = 'Domnall Brecc';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Domnall Brecc'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Conall Crandomna';
+  WHERE name = 'Domnall Brecc'
+)
+WHERE k.name = 'Conall Crandomna';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Conall Crandomna'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Domangart';
+  WHERE name = 'Conall Crandomna'
+)
+WHERE k.name = 'Domangart';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Domangart'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eochaid II (Dalriata)';
+  WHERE name = 'Domangart'
+)
+WHERE k.name = 'Eochaid II (Dalriata)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eochaid II (Dalriata)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eochaid III (Dalriata)';
+  WHERE name = 'Eochaid II (Dalriata)'
+)
+WHERE k.name = 'Eochaid III (Dalriata)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eochaid III (Dalriata)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aed Find';
+  WHERE name = 'Eochaid III (Dalriata)'
+)
+WHERE k.name = 'Aed Find';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aed Find'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eochaid IV (Dalriata)';
+  WHERE name = 'Aed Find'
+)
+WHERE k.name = 'Eochaid IV (Dalriata)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eochaid IV (Dalriata)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Alpin';
+  WHERE name = 'Eochaid IV (Dalriata)'
+)
+WHERE k.name = 'Alpin';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Alpin'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Kenneth';
+  WHERE name = 'Alpin'
+)
+WHERE k.name = 'Kenneth';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Kenneth'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Donald I';
+  WHERE name = 'Kenneth'
+)
+WHERE k.name = 'Donald I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Donald I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Constantine I';
+  WHERE name = 'Donald I'
+)
+WHERE k.name = 'Constantine I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Constantine I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aed';
+  WHERE name = 'Constantine I'
+)
+WHERE k.name = 'Aed';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aed'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eochaid I (SCOTS)';
+  WHERE name = 'Aed'
+)
+WHERE k.name = 'Eochaid I (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eochaid I (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Donald II';
+  WHERE name = 'Eochaid I (SCOTS)'
+)
+WHERE k.name = 'Donald II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Donald II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Constantine II';
+  WHERE name = 'Donald II'
+)
+WHERE k.name = 'Constantine II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Constantine II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Malcolm I';
+  WHERE name = 'Constantine II'
+)
+WHERE k.name = 'Malcolm I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Malcolm I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Indulf';
+  WHERE name = 'Malcolm I'
+)
+WHERE k.name = 'Indulf';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Indulf'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Dub';
+  WHERE name = 'Indulf'
+)
+WHERE k.name = 'Dub';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Dub'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Colin I';
+  WHERE name = 'Dub'
+)
+WHERE k.name = 'Colin I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Colin I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Kenneth II';
+  WHERE name = 'Colin I'
+)
+WHERE k.name = 'Kenneth II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Kenneth II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Constantine III';
+  WHERE name = 'Kenneth II'
+)
+WHERE k.name = 'Constantine III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Constantine III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Kenneth III';
+  WHERE name = 'Constantine III'
+)
+WHERE k.name = 'Kenneth III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Kenneth III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Malcolm II';
+  WHERE name = 'Kenneth III'
+)
+WHERE k.name = 'Malcolm II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Malcolm II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Duncan I';
+  WHERE name = 'Malcolm II'
+)
+WHERE k.name = 'Duncan I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Duncan I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Macbeth';
+  WHERE name = 'Duncan I'
+)
+WHERE k.name = 'Macbeth';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Macbeth'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Lulach';
+  WHERE name = 'Macbeth'
+)
+WHERE k.name = 'Lulach';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Lulach'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Malcolm III';
+  WHERE name = 'Lulach'
+)
+WHERE k.name = 'Malcolm III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Malcolm III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Donald III';
+  WHERE name = 'Malcolm III'
+)
+WHERE k.name = 'Donald III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Donald III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Duncan II';
+  WHERE name = 'Donald III'
+)
+WHERE k.name = 'Duncan II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Duncan II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edgar';
+  WHERE name = 'Duncan II'
+)
+WHERE k.name = 'Edgar';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edgar'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Alexander I';
+  WHERE name = 'Edgar'
+)
+WHERE k.name = 'Alexander I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Alexander I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'David I';
+  WHERE name = 'Alexander I'
+)
+WHERE k.name = 'David I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'David I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Malcolm IV';
+  WHERE name = 'David I'
+)
+WHERE k.name = 'Malcolm IV';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Malcolm IV'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'William I';
+  WHERE name = 'Malcolm IV'
+)
+WHERE k.name = 'William I (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'William I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Alexander II';
+  WHERE name = 'William I (SCOTS)'
+)
+WHERE k.name = 'Alexander II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Alexander II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Alexander III';
+  WHERE name = 'Alexander II'
+)
+WHERE k.name = 'Alexander III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Alexander III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Margaret';
+  WHERE name = 'Alexander III'
+)
+WHERE k.name = 'Margaret';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Margaret'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Robert I';
+  WHERE name = 'Margaret'
+)
+WHERE k.name = 'Robert I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Robert I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'David II';
+  WHERE name = 'Robert I'
+)
+WHERE k.name = 'David II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'David II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Robert II';
+  WHERE name = 'David II'
+)
+WHERE k.name = 'Robert II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Robert II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Robert III';
+  WHERE name = 'Robert II'
+)
+WHERE k.name = 'Robert III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Robert III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James I (SCOTS)';
+  WHERE name = 'Robert III'
+)
+WHERE k.name = 'James I (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James I (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James II (SCOTS)';
+  WHERE name = 'James I (SCOTS)'
+)
+WHERE k.name = 'James II (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James II (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James III (SCOTS)';
+  WHERE name = 'James II (SCOTS)'
+)
+WHERE k.name = 'James III (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James III (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James IV (SCOTS)';
+  WHERE name = 'James III (SCOTS)'
+)
+WHERE k.name = 'James IV (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James IV (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James V (SCOTS)';
+  WHERE name = 'James IV (SCOTS)'
+)
+WHERE k.name = 'James V (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James V (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Mary I (SCOTS)';
+  WHERE name = 'James V (SCOTS)'
+)
+WHERE k.name = 'Mary I (SCOTS)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Mary I (SCOTS)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James I (GB)';
+  WHERE name = 'Mary I (SCOTS)'
+)
+WHERE k.name = 'James I (GB)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James I (GB)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Charles I';
+  WHERE name = 'James I (GB)'
+)
+WHERE k.name = 'Charles I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Charles I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Charles II';
+  WHERE name = 'Charles I'
+)
+WHERE k.name = 'Charles II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Charles II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'James II (GB)';
+  WHERE name = 'Charles II'
+)
+WHERE k.name = 'James II (GB)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'James II (GB)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Mary II';
+  WHERE name = 'James II (GB)'
+)
+WHERE k.name = 'Mary II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Mary II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Anne';
+  WHERE name = 'Mary II'
+)
+WHERE k.name = 'Anne';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Anne'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'George I';
+  WHERE name = 'Anne'
+)
+WHERE k.name = 'George I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'George I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'George II';
+  WHERE name = 'George I'
+)
+WHERE k.name = 'George II';
 
 	
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'George II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'George III';
+  WHERE name = 'George II'
+)
+WHERE k.name = 'George III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'George III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'George IV';
+  WHERE name = 'George III'
+)
+WHERE k.name = 'George IV';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'George IV'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'William IV';
+  WHERE name = 'George IV'
+)
+WHERE k.name = 'William IV';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'William IV'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Victoria';
+  WHERE name = 'William IV'
+)
+WHERE k.name = 'Victoria';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Victoria'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward VII';
+  WHERE name = 'Victoria'
+)
+WHERE k.name = 'Edward VII';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward VII'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'George V';
+  WHERE name = 'Edward VII'
+)
+WHERE k.name = 'George V';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'George V'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward VIII';
+  WHERE name = 'George V'
+)
+WHERE k.name = 'Edward VIII';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward VIII'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'George VI';
+  WHERE name = 'Edward VIII'
+)
+WHERE k.name = 'George VI';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'George VI'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Elizabeth II';
+  WHERE name = 'George VI'
+)
+WHERE k.name = 'Elizabeth II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cerdic'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Cynric';
+  WHERE name = 'Cerdic'
+)
+WHERE k.name = 'Cynric';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cynric'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Ceawlin';
+  WHERE name = 'Cynric'
+)
+WHERE k.name = 'Ceawlin';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Ceawlin'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Ceol';
+  WHERE name = 'Ceawlin'
+)
+WHERE k.name = 'Ceol';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Ceol'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Ceolwulf';
+  WHERE name = 'Ceol'
+)
+WHERE k.name = 'Ceolwulf';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Ceolwulf'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Cynegils';
+  WHERE name = 'Ceolwulf'
+)
+WHERE k.name = 'Cynegils';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cynegils'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Cenwalh';
+  WHERE name = 'Cynegils'
+)
+WHERE k.name = 'Cenwalh';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cenwalh'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Cenfus';
+  WHERE name = 'Cenwalh'
+)
+WHERE k.name = 'Cenfus';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cenfus'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aescwine';
+  WHERE name = 'Cenfus'
+)
+WHERE k.name = 'Aescwine';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aescwine'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Centwine';
+  WHERE name = 'Aescwine'
+)
+WHERE k.name = 'Centwine';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Centwine'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Caedwalla';
+  WHERE name = 'Centwine'
+)
+WHERE k.name = 'Caedwalla';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Caedwalla'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Ine';
+  WHERE name = 'Caedwalla'
+)
+WHERE k.name = 'Ine';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Ine'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelheard';
+  WHERE name = 'Ine'
+)
+WHERE k.name = 'Aethelheard';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelheard'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Cuthred';
+  WHERE name = 'Aethelheard'
+)
+WHERE k.name = 'Cuthred';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cuthred'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Cynewulf';
+  WHERE name = 'Cuthred'
+)
+WHERE k.name = 'Cynewulf';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Cynewulf'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Beorhtric';
+  WHERE name = 'Cynewulf'
+)
+WHERE k.name = 'Beorhtric';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Beorhtric'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Ecgberht';
+  WHERE name = 'Beorhtric'
+)
+WHERE k.name = 'Ecgberht';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Ecgberht'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelwulf';
+  WHERE name = 'Ecgberht'
+)
+WHERE k.name = 'Aethelwulf';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelwulf'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelbald';
+  WHERE name = 'Aethelwulf'
+)
+WHERE k.name = 'Aethelbald';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelbald'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelberht';
+  WHERE name = 'Aethelbald'
+)
+WHERE k.name = 'Aethelberht';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelberht'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelred';
+  WHERE name = 'Aethelberht'
+)
+WHERE k.name = 'Aethelred (WESSEX)';
 
 	
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelred'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Alfred the Great';
+  WHERE name = 'Aethelred (WESSEX)'
+)
+WHERE k.name = 'Alfred the Great';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Alfred the Great'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward the Elder';
+  WHERE name = 'Alfred the Great'
+)
+WHERE k.name = 'Edward the Elder';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward the Elder'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelstan';
+  WHERE name = 'Edward the Elder'
+)
+WHERE k.name = 'Aethelstan';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelstan'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edmund I';
+  WHERE name = 'Aethelstan'
+)
+WHERE k.name = 'Edmund I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edmund I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eadred';
+  WHERE name = 'Edmund I'
+)
+WHERE k.name = 'Eadred';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eadred'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Eadwig';
+  WHERE name = 'Eadred'
+)
+WHERE k.name = 'Eadwig';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Eadwig'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edgar the Peaceful';
+  WHERE name = 'Eadwig'
+)
+WHERE k.name = 'Edgar the Peaceful';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edgar the Peaceful'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward the Martyr';
+  WHERE name = 'Edgar the Peaceful'
+)
+WHERE k.name = 'Edward the Martyr';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward the Martyr'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Aethelred';
+  WHERE name = 'Edward the Martyr'
+)
+WHERE k.name = 'Aethelred (ENG)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Aethelred'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edmund Ironside';
+  WHERE name = 'Aethelred (ENG)'
+)
+WHERE k.name = 'Edmund Ironside';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edmund Ironside'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward the Confessor';
+  WHERE name = 'Edmund Ironside'
+)
+WHERE k.name = 'Edward the Confessor';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward the Confessor'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'William I';
+  WHERE name = 'Edward the Confessor'
+)
+WHERE k.name = 'William I (ENG)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'William I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'William II';
+  WHERE name = 'William I (SCOTS)'
+)
+WHERE k.name = 'William II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'William II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry I';
+  WHERE name = 'William II'
+)
+WHERE k.name = 'Henry I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry II';
+  WHERE name = 'Henry I'
+)
+WHERE k.name = 'Henry II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Richard I';
+  WHERE name = 'Henry II'
+)
+WHERE k.name = 'Richard I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Richard I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'John';
+  WHERE name = 'Richard I'
+)
+WHERE k.name = 'John';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'John'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry III';
+  WHERE name = 'John'
+)
+WHERE k.name = 'Henry III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward I';
+  WHERE name = 'Henry III'
+)
+WHERE k.name = 'Edward I';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward I'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward II';
+  WHERE name = 'Edward I'
+)
+WHERE k.name = 'Edward II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward III';
+  WHERE name = 'Edward II'
+)
+WHERE k.name = 'Edward III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Richard II';
+  WHERE name = 'Edward III'
+)
+WHERE k.name = 'Richard II';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Richard II'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry IV';
+  WHERE name = 'Richard II'
+)
+WHERE k.name = 'Henry IV';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry IV'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry V';
+  WHERE name = 'Henry IV'
+)
+WHERE k.name = 'Henry V';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry V'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry VI';
+  WHERE name = 'Henry V'
+)
+WHERE k.name = 'Henry VI';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry VI'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward IV';
+  WHERE name = 'Henry VI'
+)
+WHERE k.name = 'Edward IV';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward IV'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward V';
+  WHERE name = 'Edward IV'
+)
+WHERE k.name = 'Edward V';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward V'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Richard III';
+  WHERE name = 'Edward V'
+)
+WHERE k.name = 'Richard III';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Richard III'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry VII';
+  WHERE name = 'Richard III'
+)
+WHERE k.name = 'Henry VII';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry VII'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Henry VIII';
+  WHERE name = 'Henry VII'
+)
+WHERE k.name = 'Henry VIII';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Henry VIII'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Edward VI';
+  WHERE name = 'Henry VIII'
+)
+WHERE k.name = 'Edward VI';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Edward VI'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Mary I (ENG)';
+  WHERE name = 'Edward VI'
+)
+WHERE k.name = 'Mary I (ENG)';
 
-UPDATE royals_of_britain.kings as k,
-(
-  SELECT `id`
+UPDATE royals_of_britain.kings as k
+SET predecessor_id = (
+  SELECT id
   FROM royals_of_britain.kings
-  WHERE `name` = 'Mary I (ENG)'
-) as s
-SET k.predecessor_id = s.id
-WHERE k.`name` = 'Elizabeth I';
+  WHERE name = 'Mary I (ENG)'
+)
+WHERE k.name = 'Elizabeth I';

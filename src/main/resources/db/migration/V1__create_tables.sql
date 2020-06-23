@@ -1,18 +1,18 @@
-USE royals_of_britain;
+--USE royals_of_britain;
 
-CREATE TABLE `houses` (
-    `id` bigint(20) PRIMARY KEY AUTO_INCREMENT,
-    `name` varchar(255) NOT NULL
+CREATE TABLE royals_of_britain.houses (
+    id BIGSERIAL PRIMARY KEY,
+    name varchar(255) NOT NULL
 );
-CREATE TABLE `kings` (
-    `id` bigint(20) AUTO_INCREMENT PRIMARY KEY,
-    `name` varchar(255) NOT NULL,
-    `year_of_birth` int,
-    `year_of_death` int,
-    `predecessor_id` bigint(20),
-    `house_id` bigint(20),
-    FOREIGN KEY (house_id) REFERENCES houses(id)
+CREATE TABLE royals_of_britain.kings (
+    id BIGSERIAL PRIMARY KEY,
+    name varchar(255) NOT NULL,
+    year_of_birth INTEGER,
+    year_of_death INTEGER,
+    predecessor_id BIGINT,
+    house_id BIGINT,
+    FOREIGN KEY (house_id) REFERENCES houses (id)
 );
 
-ALTER TABLE `kings`
+ALTER TABLE royals_of_britain.kings
 ADD FOREIGN KEY (predecessor_id) REFERENCES kings(id);
