@@ -3,7 +3,7 @@ package website.fgto.royals_of_britain.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "kings")
+@Table(name = "kings", schema = "royals_of_britain")
 public class King {
 
   @Id
