@@ -83,14 +83,12 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
-			<scope>test</scope>
 			<version>${jetty9.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-jmx</artifactId>
 			<version>${jetty9.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- uncomment if WebSocket support is needed
@@ -195,7 +193,7 @@
 							<value>${project.build.directory}/test-classes</value>
 						</systemProperty>
 					</systemProperties>
-					<jettyXml>${project.basedir}/src/test/jetty/jetty.xml,${project.basedir}/src/test/jetty/jetty-ssl.xml,${project.basedir}/src/test/jetty/jetty-http.xml,${project.basedir}/src/test/jetty/jetty-https.xml</jettyXml>
+					<jettyXml>${project.basedir}/src/main/jetty/jetty.xml,${project.basedir}/src/main/jetty/jetty-ssl.xml,${project.basedir}/src/main/jetty/jetty-http.xml,${project.basedir}/src/main/jetty/jetty-https.xml</jettyXml>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -215,6 +213,9 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>6.4.4</version>
+				<configuration>
+					<url>${env.JDBC_DATABASE_URL}</url>
+				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.postgresql</groupId>
@@ -223,6 +224,26 @@
 						<scope>runtime</scope>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals><goal>copy</goal></goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.heroku</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>9.0.30.0</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
